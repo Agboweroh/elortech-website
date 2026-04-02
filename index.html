@@ -3,237 +3,311 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ELOR-TECH LTD — World-Class Digital Agency</title>
-  <meta name="description" content="ELOR-TECH is a premier global web agency delivering web development, mobile apps, SEO, and enterprise software solutions."/>
+  <title>World-Class Digital Agency — ELOR-TECH LTD</title>
+  <meta name="description" content="ELOR-TECH delivers world-class web development, mobile apps, SEO, hosting and enterprise software — from Nigeria to the world."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="home.css"/>
 </head>
 <body>
-<script src="nav.js"></script>
+  <!-- GRID BG -->
+  <div class="grid-bg"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-glow g1"></div>
-  <div class="hero-bg-glow g2"></div>
-  <div class="container hero-inner">
-    <div class="hero-content fade-up">
-      <div class="hero-badge">Est. 2015 · Nigeria to the World</div>
-      <h1 class="hero-headline">
-        We Build<br/>
-        <span class="grad-text">Digital</span><br/>
-        Excellence.
-      </h1>
-      <p class="hero-sub">ELOR-TECH is a premier global web agency delivering transformative digital products — from blazing-fast websites to enterprise software solutions across six major industries.</p>
-      <div class="hero-actions">
-        <a href="services.html" class="btn-primary">Explore Services</a>
-        <a href="contact.html" class="btn-ghost">Start a Project →</a>
-      </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">ELOR<span>TECH</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="hosting.html">Hosting</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="hero-stats-row fade-up-2">
-      <div class="stat-box">
-        <span class="num" data-count="10">0</span><span class="num">+</span>
-        <div class="lbl">Years of Excellence</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-box">
-        <span class="num" data-count="120">0</span><span class="num">+</span>
-        <div class="lbl">Projects Delivered</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-box">
-        <span class="num" data-count="6">0</span>
-        <div class="lbl">Industry Sectors</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-box">
-        <span class="num" data-count="98">0</span><span class="num">%</span>
-        <div class="lbl">Client Satisfaction</div>
-      </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="hosting.html">Hosting</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span>Web Development</span><span class="dot">●</span>
-    <span>Mobile Apps</span><span class="dot">●</span>
-    <span>SEO & Marketing</span><span class="dot">●</span>
-    <span>Cloud Hosting</span><span class="dot">●</span>
-    <span>UX/UI Design</span><span class="dot">●</span>
-    <span>Brand Identity</span><span class="dot">●</span>
-    <span>E-commerce</span><span class="dot">●</span>
-    <span>Enterprise Software</span><span class="dot">●</span>
-    <span>Web Development</span><span class="dot">●</span>
-    <span>Mobile Apps</span><span class="dot">●</span>
-    <span>SEO & Marketing</span><span class="dot">●</span>
-    <span>Cloud Hosting</span><span class="dot">●</span>
-    <span>UX/UI Design</span><span class="dot">●</span>
-    <span>Brand Identity</span><span class="dot">●</span>
-    <span>E-commerce</span><span class="dot">●</span>
-    <span>Enterprise Software</span><span class="dot">●</span>
-  </div>
-</div>
+  <!-- PAGE CONTENT START -->
+  <div class="page-wrap">
 
-<!-- SERVICES OVERVIEW -->
-<section class="home-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">What We Do</div>
-      <h2 class="section-title">We Create Best<br/><em>Digital Products</em></h2>
-      <p class="section-sub">A comprehensive web agency offering a full range of services to meet the diverse needs of clients worldwide.</p>
-    </div>
-    <div class="services-grid">
-      <a href="services.html" class="srv-card reveal" style="--delay:0s">
-        <div class="srv-icon">🌐</div>
-        <h3>Web Development</h3>
-        <p>Visually stunning and highly functional websites, responsive and tailored to your business objectives.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-      <a href="services.html" class="srv-card reveal" style="--delay:0.08s">
-        <div class="srv-icon">📱</div>
-        <h3>Mobile App Development</h3>
-        <p>Exceptional iOS and Android experiences — intuitive, engaging, and built for performance.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-      <a href="services.html" class="srv-card reveal" style="--delay:0.16s">
-        <div class="srv-icon">📈</div>
-        <h3>Marketing & SEO</h3>
-        <p>Higher rankings, right audience, measurable ROI. Data-driven digital marketing strategies.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-      <a href="services.html" class="srv-card reveal" style="--delay:0.24s">
-        <div class="srv-icon">☁️</div>
-        <h3>Hosting & Maintenance</h3>
-        <p>Reliable, secure hosting with 99.9% uptime and proactive maintenance support.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-      <a href="services.html" class="srv-card reveal" style="--delay:0.32s">
-        <div class="srv-icon">🎨</div>
-        <h3>UX/UI Design</h3>
-        <p>User-centered design that delights — from wireframes to pixel-perfect interfaces.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-      <a href="services.html" class="srv-card reveal" style="--delay:0.40s">
-        <div class="srv-icon">✦</div>
-        <h3>Brand Identity</h3>
-        <p>Logos, brand guidelines, and visual identities that set you apart in your market.</p>
-        <div class="srv-arrow">→</div>
-      </a>
-    </div>
-    <div style="text-align:center; margin-top:44px;" class="reveal">
-      <a href="services.html" class="btn-outline">View All Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PRODUCT — ChurchOS -->
-<section class="product-spotlight">
-  <div class="container">
-    <div class="spotlight-inner reveal">
-      <div class="spotlight-label">Featured Product</div>
-      <div class="spotlight-grid">
-        <div class="spotlight-left">
-          <div class="section-tag">By ELOR-TECH</div>
-          <h2 class="section-title">Introducing<br/><em>ChurchOS</em></h2>
-          <p style="color:var(--text-muted);margin-bottom:24px;font-size:1.05rem;">The church management platform that actually works. One place to manage members, collect giving, run events, and communicate — trusted by 1,000+ churches worldwide.</p>
-          <div class="spotlight-stats">
-            <div class="sp-stat"><span data-count="1000">0</span>+<div>Churches</div></div>
-            <div class="sp-stat">$<span>5M</span>+<div>Giving Processed</div></div>
-            <div class="sp-stat"><span>99.5</span>%<div>Uptime</div></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">Est. 2015 · Nigeria to the World</div>
+          <h1 class="hero-h1">
+            We Build<br/>
+            <span class="grad-text">Digital</span><br/>
+            Excellence.
+          </h1>
+          <p class="hero-sub">ELOR-TECH is a premier global web agency delivering transformative digital products — from blazing-fast websites to enterprise software solutions across six major industries.</p>
+          <div class="hero-btns">
+            <a href="services.html" class="btn-primary">Explore Services</a>
+            <a href="contact.html" class="btn-ghost">Start a Project →</a>
           </div>
-          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;">
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box"><span class="num" data-count="10">0</span><span class="num">+</span><div class="lbl">Years of Excellence</div></div>
+          <div class="stat-div"></div>
+          <div class="stat-box"><span class="num" data-count="120">0</span><span class="num">+</span><div class="lbl">Projects Delivered</div></div>
+          <div class="stat-div"></div>
+          <div class="stat-box"><span class="num" data-count="6">0</span><div class="lbl">Industry Sectors</div></div>
+          <div class="stat-div"></div>
+          <div class="stat-box"><span class="num" data-count="98">0</span><span class="num">%</span><div class="lbl">Client Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Web Development</span><span class="dot">●</span>
+      <span>Mobile Apps</span><span class="dot">●</span>
+      <span>SEO &amp; Marketing</span><span class="dot">●</span>
+      <span>Cloud Hosting</span><span class="dot">●</span>
+      <span>UX/UI Design</span><span class="dot">●</span>
+      <span>Brand Identity</span><span class="dot">●</span>
+      <span>E-commerce</span><span class="dot">●</span>
+      <span>Enterprise Software</span><span class="dot">●</span>
+      <span>Web Development</span><span class="dot">●</span>
+      <span>Mobile Apps</span><span class="dot">●</span>
+      <span>SEO &amp; Marketing</span><span class="dot">●</span>
+      <span>Cloud Hosting</span><span class="dot">●</span>
+      <span>UX/UI Design</span><span class="dot">●</span>
+      <span>Brand Identity</span><span class="dot">●</span>
+      <span>E-commerce</span><span class="dot">●</span>
+      <span>Enterprise Software</span><span class="dot">●</span>
+    </div>
+  </div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="sec">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">We Create Best<br/><em>Digital Products</em></h2>
+        <p class="section-sub">A comprehensive web agency offering a full range of services to meet the diverse needs of clients worldwide.</p>
+      </div>
+      <div class="grid-3">
+        <a href="services.html" class="srv-card reveal" style="--delay:0s">
+          <div class="srv-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Visually stunning and highly functional websites, responsive and tailored to your business objectives.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+        <a href="services.html" class="srv-card reveal" style="--delay:0.08s">
+          <div class="srv-icon">📱</div>
+          <h3>Mobile App Development</h3>
+          <p>Exceptional iOS and Android experiences — intuitive, engaging, and built for performance at scale.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+        <a href="services.html" class="srv-card reveal" style="--delay:0.16s">
+          <div class="srv-icon">📈</div>
+          <h3>Marketing &amp; SEO</h3>
+          <p>Higher rankings, right audience, measurable ROI. Data-driven digital marketing that delivers.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+        <a href="services.html" class="srv-card reveal" style="--delay:0.24s">
+          <div class="srv-icon">☁️</div>
+          <h3>Hosting &amp; Maintenance</h3>
+          <p>Reliable, secure hosting with 99.9% uptime and proactive maintenance support around the clock.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+        <a href="services.html" class="srv-card reveal" style="--delay:0.32s">
+          <div class="srv-icon">🎨</div>
+          <h3>UX/UI Design</h3>
+          <p>User-centred design that delights — from wireframes to pixel-perfect, production-ready interfaces.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+        <a href="services.html" class="srv-card reveal" style="--delay:0.40s">
+          <div class="srv-icon">✦</div>
+          <h3>Brand Identity</h3>
+          <p>Logos, brand guidelines and visual identities that set you apart and resonate with your market.</p>
+          <div class="srv-arrow">→</div>
+        </a>
+      </div>
+      <div class="center-btn reveal"><a href="services.html" class="btn-outline">View All Services</a></div>
+    </div>
+  </section>
+
+  <!-- CHURCHOS SPOTLIGHT -->
+  <section class="sec bg-alt">
+    <div class="container">
+      <div class="spotlight reveal">
+        <div class="spotlight-left">
+          <div class="section-tag">Featured Product · By ELOR-TECH</div>
+          <h2 class="section-title">Introducing<br/><em>ChurchOS</em></h2>
+          <p>The church management platform that actually works. One place to manage members, collect giving, run events and communicate — trusted by 1,000+ churches worldwide.</p>
+          <div class="sp-stats">
+            <div class="sp-stat"><span class="sp-num">1,000+</span><span class="sp-lbl">Churches</span></div>
+            <div class="sp-stat"><span class="sp-num">$5M+</span><span class="sp-lbl">Giving Processed</span></div>
+            <div class="sp-stat"><span class="sp-num">99.5%</span><span class="sp-lbl">Uptime</span></div>
+          </div>
+          <div class="hero-btns" style="margin-top:32px;">
             <a href="https://elorchurchos.org" target="_blank" class="btn-primary">Visit ChurchOS →</a>
             <a href="products.html" class="btn-outline">All Products</a>
           </div>
         </div>
         <div class="spotlight-right">
           <div class="church-features">
-            <div class="cf-item"><span class="cf-icon">👥</span><div><strong>People Management</strong><p>Members, visitors, small groups, children ministry & volunteers.</p></div></div>
-            <div class="cf-item"><span class="cf-icon">💝</span><div><strong>Online Giving</strong><p>Stripe, CashApp & Zelle. Auto receipts and fund tracking.</p></div></div>
-            <div class="cf-item"><span class="cf-icon">📢</span><div><strong>Communications</strong><p>Email campaigns and push notifications to your congregation.</p></div></div>
-            <div class="cf-item"><span class="cf-icon">✨</span><div><strong>AI Sermon Prep</strong><p>Full sermon outlines with illustrations and application points.</p></div></div>
+            <div class="cf-row"><div class="cf-icon">👥</div><div><strong>People Management</strong><p>Members, visitors, small groups, children ministry &amp; volunteers in one place.</p></div></div>
+            <div class="cf-row"><div class="cf-icon">💝</div><div><strong>Online Giving</strong><p>Accept tithes via Stripe, CashApp &amp; Zelle. Automatic receipts and fund tracking.</p></div></div>
+            <div class="cf-row"><div class="cf-icon">📢</div><div><strong>Communications</strong><p>Email campaigns and push notifications to your entire congregation instantly.</p></div></div>
+            <div class="cf-row"><div class="cf-icon">✨</div><div><strong>AI Sermon Prep</strong><p>Full sermon outlines, illustrations and application points generated in seconds.</p></div></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECTORS -->
-<section class="home-section bg-alt">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">Industries We Serve</div>
-      <h2 class="section-title">Software for<br/><em>Key Sectors</em></h2>
-      <p class="section-sub">Diverse software solutions tailored to the unique needs of industries worldwide.</p>
+  <!-- SECTORS -->
+  <section class="sec">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Industries We Serve</div>
+        <h2 class="section-title">Software Solutions for<br/><em>Key Sectors</em></h2>
+        <p class="section-sub">Diverse software tailored to the unique needs of industries worldwide.</p>
+      </div>
+      <div class="grid-3">
+        <div class="sector-card reveal" style="--delay:0s"><div class="sc-emoji">🏥</div><h4>Medical &amp; Health</h4><p>EHR, telehealth, patient management, and AI-driven diagnostics.</p></div>
+        <div class="sector-card reveal" style="--delay:0.08s"><div class="sc-emoji">⚡</div><h4>Energy</h4><p>Energy management, predictive maintenance, and compliance tools.</p></div>
+        <div class="sector-card reveal" style="--delay:0.16s"><div class="sc-emoji">🏗️</div><h4>Construction</h4><p>Project management with real-time collaboration and safety tracking.</p></div>
+        <div class="sector-card reveal" style="--delay:0.24s"><div class="sc-emoji">🌱</div><h4>Agriculture</h4><p>Smart farming, crop monitoring and supply chain management.</p></div>
+        <div class="sector-card reveal" style="--delay:0.32s"><div class="sc-emoji">🏢</div><h4>Real Estate</h4><p>Property management, CRM and marketing tools for faster deals.</p></div>
+        <div class="sector-card reveal" style="--delay:0.40s"><div class="sc-emoji">🎓</div><h4>Education</h4><p>E-learning platforms, SIS and virtual classrooms for modern learning.</p></div>
+      </div>
     </div>
-    <div class="sectors-grid">
-      <div class="sector-card reveal" style="--delay:0s"><div class="sc-emoji">🏥</div><h4>Medical & Health</h4><p>EHR, telehealth, patient management, and AI-driven diagnostics.</p></div>
-      <div class="sector-card reveal" style="--delay:0.08s"><div class="sc-emoji">⚡</div><h4>Energy</h4><p>Energy management, predictive maintenance, and compliance tools.</p></div>
-      <div class="sector-card reveal" style="--delay:0.16s"><div class="sc-emoji">🏗️</div><h4>Construction</h4><p>Project management with real-time collaboration and safety tracking.</p></div>
-      <div class="sector-card reveal" style="--delay:0.24s"><div class="sc-emoji">🌱</div><h4>Agriculture</h4><p>Smart farming, crop monitoring, and supply chain management.</p></div>
-      <div class="sector-card reveal" style="--delay:0.32s"><div class="sc-emoji">🏢</div><h4>Real Estate</h4><p>Property management, CRM, and marketing tools for faster deals.</p></div>
-      <div class="sector-card reveal" style="--delay:0.40s"><div class="sc-emoji">🎓</div><h4>Education</h4><p>E-learning platforms, SIS, and virtual classrooms for modern learning.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="home-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-tag">Client Love</div>
-      <h2 class="section-title">What Our Clients<br/><em>Are Saying</em></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal" style="--delay:0s">
-        <div class="quote">"</div>
-        <p>Working with ELOR-TECH has been nothing but exceptional. The team was attentive to my requests and ensured I received the best results within the timeframe given. I have seen a lot of improvement in my business platform performance. Jacob and his team put me at ease — I'm looking forward to future collaborations.</p>
-        <div class="testi-author">
-          <div class="testi-av">IA</div>
-          <div><div class="testi-name">Iyanuoluwa Adegbite</div><div class="testi-role">CEO, TOTFRISHION USA</div></div>
+  <!-- TESTIMONIALS -->
+  <section class="sec bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Client Love</div>
+        <h2 class="section-title">What Our Clients<br/><em>Are Saying</em></h2>
+      </div>
+      <div class="grid-2">
+        <div class="testi-card reveal" style="--delay:0s">
+          <div class="testi-quote">"</div>
+          <p>Working with ELOR-TECH has been nothing but exceptional. The team was attentive to my requests and ensured I received the best results within the timeframe given. I have seen a lot of improvement in my business platform performance. Jacob and his team put me at ease — I'm looking forward to future collaborations.</p>
+          <div class="testi-author">
+            <div class="testi-av">IA</div>
+            <div><div class="testi-name">Iyanuoluwa Adegbite</div><div class="testi-role">CEO, TOTFRISHION USA</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="--delay:0.12s">
+          <div class="testi-quote">"</div>
+          <p>Working with ELOR-TECH has been a game-changer for our business. Their innovative solutions and commitment to excellence have exceeded our expectations. The team is highly skilled and incredibly responsive. Thanks to ELOR-TECH, we've streamlined our operations and achieved new levels of efficiency.</p>
+          <div class="testi-author">
+            <div class="testi-av">FA</div>
+            <div><div class="testi-name">Francis Abidoye</div><div class="testi-role">CEO, GradTutors Cohort — Nigeria</div></div>
+          </div>
         </div>
       </div>
-      <div class="testi-card reveal" style="--delay:0.12s">
-        <div class="quote">"</div>
-        <p>Working with ELOR-TECH has been a game-changer for our business. Their innovative solutions and commitment to excellence have exceeded our expectations. The team is highly skilled and incredibly responsive. Thanks to ELOR-TECH, we've streamlined our operations and achieved new levels of efficiency.</p>
-        <div class="testi-author">
-          <div class="testi-av">FA</div>
-          <div><div class="testi-name">Francis Abidoye</div><div class="testi-role">CEO, GradTutors Cohort — Nigeria</div></div>
+      <div class="trust-wrap reveal">
+        <p class="trust-label">Trusted by companies across multiple industries</p>
+        <div class="trust-logos">
+          <div class="trust-item">Eteva</div>
+          <div class="trust-item">Querida Living</div>
+          <div class="trust-item">GradTutors</div>
+          <div class="trust-item">TOTFRISHION</div>
+          <div class="trust-item">Berechiah</div>
+          <div class="trust-item">FMS</div>
         </div>
       </div>
     </div>
-    <!-- Trusted by -->
-    <div class="trust-wrap reveal">
-      <p class="trust-label">Trusted by companies across multiple industries</p>
-      <div class="trust-logos">
-        <div class="trust-item">Eteva</div>
-        <div class="trust-item">Querida Living</div>
-        <div class="trust-item">GradTutors</div>
-        <div class="trust-item">TOTFRISHION</div>
-        <div class="trust-item">Berechiah</div>
-        <div class="trust-item">FMS</div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-blob"></div>
+    <div class="cta-band-inner reveal">
+      <h2>Have a Project in Mind?</h2>
+      <p>Knowing your project is in the right hands gives such great joy and satisfaction. Let's build something extraordinary together.</p>
+      <div class="btns">
+        <a href="contact.html" class="btn-primary">Start Your Project</a>
+        <a href="services.html" class="btn-outline">View Services</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  </div><!-- /page-wrap -->
 
-<!-- CTA BAND -->
-<div class="cta-band">
-  <div class="cta-band-inner reveal">
-    <h2>Have a Project in Mind?</h2>
-    <p>Knowing your project is in the right hands gives such great joy and satisfaction. Let's build something extraordinary together.</p>
-    <div class="btns">
-      <a href="contact.html" class="btn-primary">Start Your Project</a>
-      <a href="services.html" class="btn-outline">View Services</a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo">ELOR<span>TECH</span></a>
+          <p>Founded in 2015. Transforming the digital landscape for businesses worldwide — from Nigeria to the globe.</p>
+          <div class="footer-socials">
+            <a href="https://x.com/israelprince4" target="_blank" aria-label="X / Twitter">𝕏</a>
+            <a href="https://www.linkedin.com/in/jacob-momoh-5a05b485/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/momohjacob20/" target="_blank" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">Mobile Apps</a></li>
+              <li><a href="services.html">SEO &amp; Marketing</a></li>
+              <li><a href="services.html">Hosting &amp; Maintenance</a></li>
+              <li><a href="services.html">UX/UI Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Our Products</a></li>
+              <li><a href="pricing.html">Pricing Plans</a></li>
+              <li><a href="hosting.html">Hosting Plans</a></li>
+              <li><a href="jobs.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="tel:+2348168376606">+234 816 837 6606</a></li>
+              <li><a href="mailto:info@elortech.com">info@elortech.com</a></li>
+              <li><a href="contact.html">Send a Message</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ELOR-TECH LTD. All rights reserved.</p>
+        <p>Built with ♥ in Nigeria · Competing Globally.</p>
+      </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -4,228 +4,202 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hosting Plans — ELOR-TECH LTD</title>
-  <meta name="description" content="Reliable, affordable hosting plans from ELOR-TECH — shared, VPS, and dedicated server options for every business."/>
+  <meta name="description" content="Reliable, secure and fast web hosting managed by ELOR-TECH. Choose the hosting plan that powers your digital presence."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
-  <style>
-    .hosting-body { padding: 90px 0; }
-    .hosting-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 60px; }
-    .h-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 24px;
-      transition: all 0.3s;
-      position: relative;
-    }
-    .h-card:hover { border-color: var(--gold-border-hover); transform: translateY(-4px); }
-    .h-card.popular { border-color: rgba(197,160,89,0.4); background: linear-gradient(160deg,#001a3a,var(--surface)); }
-    .h-badge { position: absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:#000; font-size:0.62rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:4px 14px; border-radius:100px; white-space:nowrap; }
-    .h-tier { font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
-    .h-price { font-family:var(--heading-font); font-size:2rem; font-weight:800; color:var(--white); letter-spacing:-0.04em; margin-bottom:4px; }
-    .h-sub { font-size:0.78rem; color:var(--text-muted); margin-bottom:20px; }
-    .h-features { list-style:none; margin-bottom:24px; }
-    .h-features li { font-size:0.82rem; color:var(--text-muted); padding:7px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; gap:8px; }
-    .h-features li:last-child { border-bottom:none; }
-    .h-features .val { color:var(--text); font-weight:600; }
-    .h-features .gold { color:var(--gold); font-weight:700; }
-    .table-wrap { overflow-x: auto; margin-bottom: 64px; }
-    table { width:100%; border-collapse:collapse; font-size:0.88rem; }
-    table th { background:var(--surface2); color:var(--gold); font-family:var(--heading-font); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:14px 16px; text-align:left; border-bottom:1px solid var(--border); }
-    table td { padding:12px 16px; color:var(--text-muted); border-bottom:1px solid rgba(197,160,89,0.07); }
-    table tr:hover td { background:rgba(197,160,89,0.04); color:var(--text); }
-    .c-gold { color:var(--gold); font-weight:700; }
-    .c-cross { color:#4a5568; }
-    .highlight-col { background:rgba(197,160,89,0.05); color:var(--text); font-weight:600; }
-    .addons-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:64px; }
-    .addon-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; transition:all 0.3s; }
-    .addon-card:hover { border-color:var(--gold-border-hover); transform:translateY(-3px); }
-    .addon-card h4 { font-size:0.95rem; margin-bottom:8px; }
-    .addon-card p { font-size:0.84rem; color:var(--text-muted); margin-bottom:10px; line-height:1.6; }
-    .addon-price { font-family:var(--heading-font); font-size:1.1rem; font-weight:800; color:var(--gold); }
-    .vps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:64px; }
-    .vps-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px; transition:all 0.3s; }
-    .vps-card:hover { border-color:var(--gold-border-hover); transform:translateY(-4px); }
-    .vps-card h3 { font-size:1.1rem; margin-bottom:6px; }
-    .vps-price { font-family:var(--heading-font); font-size:1.8rem; font-weight:800; color:var(--gold); margin-bottom:16px; letter-spacing:-0.03em; }
-    .vps-specs { list-style:none; }
-    .vps-specs li { font-size:0.86rem; color:var(--text-muted); padding:8px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; }
-    .vps-specs li:last-child { border-bottom:none; }
-    .vps-specs .v { color:var(--text); font-weight:600; }
-    @media(max-width:1024px) { .hosting-cards { grid-template-columns:repeat(2,1fr); } .addons-grid { grid-template-columns:1fr 1fr; } .vps-grid { grid-template-columns:1fr 1fr; } }
-    @media(max-width:768px) { .hosting-cards { grid-template-columns:1fr; } .addons-grid { grid-template-columns:1fr; } .vps-grid { grid-template-columns:1fr; } }
-  </style>
 </head>
 <body>
-<script src="nav.js"></script>
+  <!-- GRID BG -->
+  <div class="grid-bg"></div>
 
-<div class="page-hero">
-  <div class="container page-hero-content">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Hosting Plans</span></div>
-    <div class="section-tag fade-up">ELORTECH J GLOBAL LTD</div>
-    <h1 class="fade-up-2">Hosting Plans<br/><em style="font-style:normal;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Built to Scale</em></h1>
-    <p class="fade-up-3">Choose the perfect hosting solution tailored to your business needs — from shared hosting to dedicated servers with 99.99% uptime guarantee.</p>
-  </div>
-</div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">ELOR<span>TECH</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="hosting.html" class="active">Hosting</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="hosting.html">Hosting</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<section class="hosting-body">
-  <div class="container">
+  <!-- PAGE CONTENT START -->
+  <div class="page-wrap">
 
-    <!-- Shared Hosting Cards -->
-    <div class="section-header reveal">
-      <div class="section-tag">Shared Hosting</div>
-      <h2 class="section-title">Hosting Plans<br/><em>For Every Size</em></h2>
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Hosting</span></div>
+      <h1>Hosting <em>Plans</em></h1>
+      <p>Fast, secure, managed cloud hosting for websites and applications. We handle the infrastructure so you can focus on your business.</p>
     </div>
-    <div class="hosting-cards">
-      <div class="h-card reveal" style="--delay:0s">
-        <div class="h-tier">Starter</div>
-        <div class="h-price">$4.99<span style="font-size:0.85rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <div class="h-sub">Perfect for personal sites</div>
-        <ul class="h-features">
-          <li>Websites <span class="val">1</span></li>
-          <li>Storage (SSD) <span class="val">10 GB</span></li>
-          <li>Bandwidth <span class="val">100 GB</span></li>
-          <li>Free Domain <span class="c-cross">✕</span></li>
-          <li>Email Accounts <span class="val">5</span></li>
-          <li>Free SSL <span class="gold">✓</span></li>
-          <li>Daily Backups <span class="c-cross">✕</span></li>
-          <li>Uptime <span class="val">99.9%</span></li>
-          <li>Support <span class="val">Email</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
-      </div>
-      <div class="h-card popular reveal" style="--delay:0.08s">
-        <div class="h-badge">Most Popular</div>
-        <div class="h-tier">Business</div>
-        <div class="h-price">$9.99<span style="font-size:0.85rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <div class="h-sub">For growing businesses</div>
-        <ul class="h-features">
-          <li>Websites <span class="val">5</span></li>
-          <li>Storage (SSD) <span class="val">50 GB</span></li>
-          <li>Bandwidth <span class="val">500 GB</span></li>
-          <li>Free Domain <span class="gold">✓ 1st Year</span></li>
-          <li>Email Accounts <span class="val">25</span></li>
-          <li>Free SSL <span class="gold">✓</span></li>
-          <li>Daily Backups <span class="gold">✓</span></li>
-          <li>Uptime <span class="val">99.9%</span></li>
-          <li>Support <span class="val">24/7 Chat</span></li>
-        </ul>
-        <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;">Get Started</a>
-      </div>
-      <div class="h-card reveal" style="--delay:0.16s">
-        <div class="h-tier">Pro</div>
-        <div class="h-price">$19.99<span style="font-size:0.85rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <div class="h-sub">For high-traffic sites</div>
-        <ul class="h-features">
-          <li>Websites <span class="val">10</span></li>
-          <li>Storage (SSD) <span class="val">100 GB</span></li>
-          <li>Bandwidth <span class="gold">Unlimited</span></li>
-          <li>Free Domain <span class="gold">✓</span></li>
-          <li>Email Accounts <span class="val">100</span></li>
-          <li>Free SSL <span class="gold">✓</span></li>
-          <li>Daily Backups <span class="gold">✓</span></li>
-          <li>Uptime <span class="val">99.99%</span></li>
-          <li>Support <span class="val">Priority</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
-      </div>
-      <div class="h-card reveal" style="--delay:0.24s">
-        <div class="h-tier">Enterprise</div>
-        <div class="h-price">$37.99<span style="font-size:0.85rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <div class="h-sub">For large organizations</div>
-        <ul class="h-features">
-          <li>Websites <span class="gold">Unlimited</span></li>
-          <li>Storage (SSD) <span class="val">200 GB</span></li>
-          <li>Bandwidth <span class="gold">Unlimited</span></li>
-          <li>Free Domain <span class="gold">✓</span></li>
-          <li>Email Accounts <span class="gold">Unlimited</span></li>
-          <li>Free SSL <span class="gold">✓</span></li>
-          <li>Daily Backups <span class="gold">✓</span></li>
-          <li>Uptime <span class="val">99.99%</span></li>
-          <li>Support <span class="val">Dedicated Mgr</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
-      </div>
-    </div>
+  </section>
 
-    <!-- Add-Ons -->
-    <div class="section-header reveal">
-      <div class="section-tag">Optional Add-Ons</div>
-      <h2 class="section-title">Enhance Your<br/><em>Hosting Plan</em></h2>
-    </div>
-    <div class="addons-grid">
-      <div class="addon-card reveal" style="--delay:0s"><h4>Premium SSL</h4><p>Advanced security for eCommerce or login portals with EV validation.</p><div class="addon-price">$3.00/mo</div></div>
-      <div class="addon-card reveal" style="--delay:0.08s"><h4>Daily Backups</h4><p>Automated daily backup with one-click restore for peace of mind.</p><div class="addon-price">$2.00/mo</div></div>
-      <div class="addon-card reveal" style="--delay:0.16s"><h4>Dedicated IP</h4><p>Ideal for custom apps, SSL certificates, or mail deliverability.</p><div class="addon-price">$5.00/mo</div></div>
-      <div class="addon-card reveal" style="--delay:0.24s"><h4>Managed WordPress</h4><p>We handle updates, security, performance, and staging environments.</p><div class="addon-price">$15.00/mo</div></div>
-      <div class="addon-card reveal" style="--delay:0.32s"><h4>Email Hosting</h4><p>Business-grade email with yourname@domain.com for your entire team.</p><div class="addon-price">From $2.50/user/mo</div></div>
-      <div class="addon-card reveal" style="--delay:0.40s"><h4>Free Migration</h4><p>We'll migrate your existing website to ELOR-TECH hosting at no extra cost.</p><div class="addon-price">Included (Business+)</div></div>
-    </div>
-
-    <!-- VPS & Dedicated -->
-    <div class="section-header reveal">
-      <div class="section-tag">VPS & Dedicated</div>
-      <h2 class="section-title">High-Performance<br/><em>Server Options</em></h2>
-      <p class="section-sub">For applications that need guaranteed resources, full control, and maximum performance.</p>
-    </div>
-    <div class="vps-grid">
-      <div class="vps-card reveal" style="--delay:0s">
-        <div class="section-tag" style="margin-bottom:12px">VPS</div>
-        <h3>VPS Basic</h3>
-        <div class="vps-price">$29.99<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <ul class="vps-specs">
-          <li>vCPU <span class="v">2 vCPU</span></li>
-          <li>RAM <span class="v">4 GB</span></li>
-          <li>SSD Storage <span class="v">80 GB</span></li>
-          <li>Bandwidth <span class="v">1 TB</span></li>
-          <li>Full Root Access <span class="v" style="color:var(--gold)">✓</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;margin-top:20px;">Get Started</a>
+  <section class="sec">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Managed Hosting</div>
+        <h2 class="section-title">Reliable Hosting,<br/><em>Zero Headaches</em></h2>
+        <p class="section-sub">All plans include SSL, daily backups, 99.9% uptime SLA, and expert support from the ELOR-TECH team.</p>
       </div>
-      <div class="vps-card reveal" style="--delay:0.1s; border-color:rgba(197,160,89,0.35)">
-        <div class="section-tag" style="margin-bottom:12px">VPS</div>
-        <h3>VPS Pro</h3>
-        <div class="vps-price">$59.99<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <ul class="vps-specs">
-          <li>vCPU <span class="v">4 vCPU</span></li>
-          <li>RAM <span class="v">8 GB</span></li>
-          <li>SSD Storage <span class="v">160 GB</span></li>
-          <li>Bandwidth <span class="v">2 TB</span></li>
-          <li>Full Root Access <span class="v" style="color:var(--gold)">✓</span></li>
-        </ul>
-        <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;margin-top:20px;">Get Started</a>
-      </div>
-      <div class="vps-card reveal" style="--delay:0.2s">
-        <div class="section-tag" style="margin-bottom:12px">Dedicated</div>
-        <h3>Dedicated Server</h3>
-        <div class="vps-price">From $120<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
-        <ul class="vps-specs">
-          <li>vCPU <span class="v">Custom</span></li>
-          <li>RAM <span class="v">Custom</span></li>
-          <li>SSD Storage <span class="v">1 TB+</span></li>
-          <li>Bandwidth <span class="v">Unlimited</span></li>
-          <li>Full Root Access <span class="v" style="color:var(--gold)">✓</span></li>
-        </ul>
-        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;margin-top:20px;">Get a Quote</a>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal" style="--delay:0s">
+          <div class="plan-tier">Starter</div>
+          <div class="plan-price"><span class="currency">$</span>20<span class="period">/mo</span></div>
+          <div class="plan-sub">Starter Hosting</div>
+          <ul class="plan-features">
+            <li><span class="chk">✓</span> 5 GB SSD storage</li>
+            <li><span class="chk">✓</span> 50 GB bandwidth</li>
+            <li><span class="chk">✓</span> Free SSL certificate</li>
+            <li><span class="chk">✓</span> Daily backups</li>
+            <li><span class="chk">✓</span> 1 website</li>
+            <li><span class="chk">✓</span> Email support</li>
+          </ul>
+          <a href="contact.html" class="btn-outline" style="display:block;text-align:center;">Get Started</a>
+        </div>
+        <div class="pricing-card featured reveal" style="--delay:0.1s">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-tier">Business</div>
+          <div class="plan-price"><span class="currency">$</span>50<span class="period">/mo</span></div>
+          <div class="plan-sub">Business Hosting</div>
+          <ul class="plan-features">
+            <li><span class="chk">✓</span> 25 GB SSD storage</li>
+            <li><span class="chk">✓</span> Unlimited bandwidth</li>
+            <li><span class="chk">✓</span> Free SSL certificate</li>
+            <li><span class="chk">✓</span> Daily backups &amp; restore</li>
+            <li><span class="chk">✓</span> Up to 5 websites</li>
+            <li><span class="chk">✓</span> Priority support</li>
+            <li><span class="chk">✓</span> Malware scanning</li>
+          </ul>
+          <a href="contact.html" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
+        </div>
+        <div class="pricing-card reveal" style="--delay:0.2s">
+          <div class="plan-tier">Pro</div>
+          <div class="plan-price"><span class="currency">$</span>120<span class="period">/mo</span></div>
+          <div class="plan-sub">Pro Hosting</div>
+          <ul class="plan-features">
+            <li><span class="chk">✓</span> 100 GB SSD storage</li>
+            <li><span class="chk">✓</span> Unlimited bandwidth</li>
+            <li><span class="chk">✓</span> Free SSL certificate</li>
+            <li><span class="chk">✓</span> Hourly backups</li>
+            <li><span class="chk">✓</span> Unlimited websites</li>
+            <li><span class="chk">✓</span> 24/7 dedicated support</li>
+            <li><span class="chk">✓</span> DDoS protection</li>
+            <li><span class="chk">✓</span> CDN included</li>
+          </ul>
+          <a href="contact.html" class="btn-outline" style="display:block;text-align:center;">Get Started</a>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<div class="cta-band">
-  <div class="cta-band-inner reveal">
-    <h2>Need Help Choosing the Right Plan?</h2>
-    <p>Our team will recommend the perfect hosting setup for your traffic, stack, and budget.</p>
-    <div class="btns">
-      <a href="contact.html" class="btn-primary">Get Consultation</a>
-      <a href="pricing.html" class="btn-outline">View Service Pricing</a>
+  <!-- FEATURES -->
+  <section class="sec bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Why Choose Us</div>
+        <h2 class="section-title">What's Included in<br/><em>Every Plan</em></h2>
+      </div>
+      <div class="grid-3">
+        <div class="sector-card reveal" style="--delay:0s"><div class="sc-emoji">🔒</div><h4>SSL &amp; Security</h4><p>Every website gets a free SSL certificate and daily malware scanning as standard.</p></div>
+        <div class="sector-card reveal" style="--delay:0.08s"><div class="sc-emoji">💾</div><h4>Daily Backups</h4><p>Automatic daily backups so your data is always safe and recoverable within minutes.</p></div>
+        <div class="sector-card reveal" style="--delay:0.16s"><div class="sc-emoji">⚡</div><h4>Fast SSD Servers</h4><p>All our hosting runs on NVMe SSD infrastructure for maximum speed and reliability.</p></div>
+        <div class="sector-card reveal" style="--delay:0.24s"><div class="sc-emoji">📊</div><h4>99.9% Uptime SLA</h4><p>We guarantee 99.9% uptime backed by a service level agreement.</p></div>
+        <div class="sector-card reveal" style="--delay:0.32s"><div class="sc-emoji">🛠️</div><h4>Expert Support</h4><p>Our team of experts is on hand to resolve issues and answer questions fast.</p></div>
+        <div class="sector-card reveal" style="--delay:0.40s"><div class="sc-emoji">🌍</div><h4>Global CDN</h4><p>Content delivered from servers closest to your visitors for fastest load times worldwide.</p></div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<script src="main.js"></script>
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-blob"></div>
+    <div class="cta-band-inner reveal">
+      <h2>Need a Custom Hosting Solution?</h2>
+      <p>We can design bespoke infrastructure for high-traffic apps, APIs or enterprise platforms. Get in touch.</p>
+      <div class="btns">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+        
+      </div>
+    </div>
+  </section>
+  </div><!-- /page-wrap -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo">ELOR<span>TECH</span></a>
+          <p>Founded in 2015. Transforming the digital landscape for businesses worldwide — from Nigeria to the globe.</p>
+          <div class="footer-socials">
+            <a href="https://x.com/israelprince4" target="_blank" aria-label="X / Twitter">𝕏</a>
+            <a href="https://www.linkedin.com/in/jacob-momoh-5a05b485/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/momohjacob20/" target="_blank" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">Mobile Apps</a></li>
+              <li><a href="services.html">SEO &amp; Marketing</a></li>
+              <li><a href="services.html">Hosting &amp; Maintenance</a></li>
+              <li><a href="services.html">UX/UI Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="products.html">Our Products</a></li>
+              <li><a href="pricing.html">Pricing Plans</a></li>
+              <li><a href="hosting.html">Hosting Plans</a></li>
+              <li><a href="jobs.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="tel:+2348168376606">+234 816 837 6606</a></li>
+              <li><a href="mailto:info@elortech.com">info@elortech.com</a></li>
+              <li><a href="contact.html">Send a Message</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ELOR-TECH LTD. All rights reserved.</p>
+        <p>Built with ♥ in Nigeria · Competing Globally.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
