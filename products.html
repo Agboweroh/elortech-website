@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products — ELOR-TECH LTD</title>
+  <meta name="description" content="Discover ELOR-TECH's world-class SaaS products including ChurchOS — the #1 church management platform."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .products-body { padding: 90px 0; }
+    .church-hero {
+      background: linear-gradient(160deg, #001226 0%, var(--navy-mid) 100%);
+      border: 1px solid rgba(197,160,89,0.3);
+      border-radius: 24px;
+      padding: 64px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .church-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 400px;
+      background: radial-gradient(ellipse, rgba(197,160,89,0.1), transparent 70%);
+      top: -100px; right: -100px;
+      pointer-events: none;
+    }
+    .church-hero-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+    .church-name { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .church-name h2 { font-size: 3rem; letter-spacing: -0.04em; }
+    .church-name .church-icon { font-size: 2.5rem; }
+    .church-desc { font-size: 1.05rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px; }
+    .church-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+    .meta-pill { font-size: 0.72rem; font-weight: 700; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--gold-border); color: var(--gold); background: var(--gold-dim); }
+    .church-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+    .cstat {
+      background: rgba(197,160,89,0.06);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+    }
+    .cstat-num { font-family: var(--heading-font); font-size: 1.8rem; font-weight: 800; color: var(--gold); letter-spacing: -0.03em; display: block; }
+    .cstat-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 3px; }
+    .church-features-full { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 80px; }
+    .cf-full {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all 0.3s;
+    }
+    .cf-full:hover { border-color: var(--gold-border-hover); transform: translateY(-3px); }
+    .cf-full .icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .cf-full h4 { font-size: 1rem; margin-bottom: 8px; }
+    .cf-full p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+    .church-pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 80px; }
+    .cp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .cp-card.popular { border-color: rgba(197,160,89,0.45); background: linear-gradient(160deg, #001a3a, var(--surface)); }
+    .cp-card:hover { transform: translateY(-4px); border-color: var(--gold-border-hover); }
+    .cp-popular { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg,var(--gold),var(--gold-light)); color:#000; font-size:0.62rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:4px 14px; border-radius:100px; white-space:nowrap; }
+    .cp-tier { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+    .cp-price { font-family: var(--heading-font); font-size: 2.2rem; font-weight: 800; color: var(--white); letter-spacing: -0.04em; margin-bottom: 4px; }
+    .cp-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 20px; }
+    .cp-features { list-style: none; margin-bottom: 24px; }
+    .cp-features li { font-size: 0.82rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; gap: 6px; }
+    .cp-features li:last-child { border-bottom: none; }
+    .cp-features .chk { color: var(--gold); }
+    .coming-soon-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 60px;
+      text-align: center;
+    }
+    .coming-soon-card h3 { font-size: 1.8rem; margin-bottom: 14px; }
+    .coming-soon-card p { color: var(--text-muted); max-width: 480px; margin: 0 auto 28px; font-size: 1rem; }
+    .coming-tags { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .coming-tag { font-size: 0.78rem; font-weight: 600; padding: 6px 16px; border-radius: 100px; background: var(--gold-dim); border: 1px solid var(--gold-border); color: var(--gold); }
+    @media(max-width:1024px) { .church-hero-inner { grid-template-columns: 1fr; gap: 40px; } .church-pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width:768px) { .church-hero { padding: 36px; } .church-features-full { grid-template-columns: 1fr; } .church-pricing-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Products</span></div>
+    <div class="section-tag fade-up">Built by ELOR-TECH</div>
+    <h1 class="fade-up-2">Our <em style="font-style:normal;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">SaaS Products</em></h1>
+    <p class="fade-up-3">Beyond client work, we build world-class software products that solve real problems at scale — trusted by thousands of organizations globally.</p>
+  </div>
+</div>
+
+<section class="products-body">
+  <div class="container">
+
+    <!-- ChurchOS Flagship -->
+    <div class="church-hero reveal">
+      <div class="church-hero-inner">
+        <div>
+          <div class="section-tag">Featured Product · Live Now</div>
+          <div class="church-name">
+            <span class="church-icon">⛪</span>
+            <h2>ChurchOS</h2>
+          </div>
+          <p class="church-desc">The church management platform that actually works. One place to manage members, collect giving, run events, and communicate — without the complexity of legacy church software.</p>
+          <div class="church-meta">
+            <span class="meta-pill">✓ Stripe, CashApp & Zelle</span>
+            <span class="meta-pill">✓ USD, GBP, EUR & more</span>
+            <span class="meta-pill">✓ GDPR Compliant</span>
+            <span class="meta-pill">✓ SOC 2 in progress</span>
+            <span class="meta-pill">✓ 30-day Free Trial</span>
+          </div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="https://elorchurchos.org" target="_blank" class="btn-primary">Visit elorchurchos.org →</a>
+            <a href="https://www.elorchurchos.org/demo" target="_blank" class="btn-outline">View Live Demo</a>
+          </div>
+        </div>
+        <div class="church-stats-grid">
+          <div class="cstat"><span class="cstat-num" data-count="1000">0</span><span class="cstat-num">+</span><div class="cstat-lbl">Churches Worldwide</div></div>
+          <div class="cstat"><span class="cstat-num">$5M+</span><div class="cstat-lbl">Giving Processed</div></div>
+          <div class="cstat"><span class="cstat-num" data-count="500">0</span><span class="cstat-num">K+</span><div class="cstat-lbl">Members Managed</div></div>
+          <div class="cstat"><span class="cstat-num">99.5%</span><div class="cstat-lbl">Uptime</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ChurchOS Features -->
+    <div class="section-header reveal">
+      <div class="section-tag">ChurchOS Features</div>
+      <h2 class="section-title">Everything Your<br/><em>Church Needs</em></h2>
+      <p class="section-sub">One platform to replace the spreadsheets, WhatsApp groups, and disconnected tools your church relies on today.</p>
+    </div>
+    <div class="church-features-full">
+      <div class="cf-full reveal" style="--delay:0s"><div class="icon">👥</div><h4>People Management</h4><p>Member records, visitor tracking, small groups, children ministry, volunteers — all in one place. Full profiles, custom fields, and powerful search.</p></div>
+      <div class="cf-full reveal" style="--delay:0.08s"><div class="icon">💝</div><h4>Online Giving</h4><p>Accept tithes and offerings online via Stripe, CashApp & Zelle. Automatic receipts and fund tracking. USD, GBP, EUR and more currencies supported.</p></div>
+      <div class="cf-full reveal" style="--delay:0.16s"><div class="icon">📢</div><h4>Communications</h4><p>Send announcements, email campaigns, and push notifications to your entire congregation instantly. Segment by group, campus, or attendance.</p></div>
+      <div class="cf-full reveal" style="--delay:0.24s"><div class="icon">📅</div><h4>Events & Attendance</h4><p>Create events, track RSVPs, manage check-ins, and monitor attendance trends. Built-in QR codes and family check-in for children's ministry.</p></div>
+      <div class="cf-full reveal" style="--delay:0.32s"><div class="icon">📖</div><h4>Scripture Projector</h4><p>Project Bible verses to a second screen during service — like EasyWorship, built right in. No additional software needed.</p></div>
+      <div class="cf-full reveal" style="--delay:0.40s"><div class="icon">✨</div><h4>AI Sermon Prep</h4><p>Get a full sermon outline, illustrations, and application points from AI in seconds. Save time and preach with confidence every Sunday.</p></div>
+      <div class="cf-full reveal" style="--delay:0.48s"><div class="icon">🏛️</div><h4>Multi-Campus Support</h4><p>Manage multiple church locations from a single dashboard. Campus-specific reporting, giving, and communication tools built in.</p></div>
+      <div class="cf-full reveal" style="--delay:0.56s"><div class="icon">🌐</div><h4>Church Website</h4><p>A fully-featured public website for your church — sermons, events, about, giving, and contact pages included with every plan.</p></div>
+    </div>
+
+    <!-- ChurchOS Pricing -->
+    <div class="section-header reveal">
+      <div class="section-tag">ChurchOS Pricing</div>
+      <h2 class="section-title">Simple, Honest<br/><em>Pricing</em></h2>
+      <p class="section-sub">No setup fees. No hidden costs. Cancel anytime. All plans include a 30-day free trial.</p>
+    </div>
+    <div class="church-pricing-grid">
+      <div class="cp-card reveal" style="--delay:0s">
+        <div class="cp-tier">Starter</div>
+        <div class="cp-price">$59<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+        <div class="cp-sub">Up to 200 members</div>
+        <ul class="cp-features">
+          <li><span class="chk">✓</span> All core features</li>
+          <li><span class="chk">✓</span> Up to 200 members</li>
+          <li><span class="chk">✓</span> Member management</li>
+          <li><span class="chk">✓</span> Online giving</li>
+          <li><span class="chk">✓</span> Church website</li>
+          <li><span class="chk">✓</span> Events & sermons</li>
+          <li><span class="chk">✓</span> Email support</li>
+        </ul>
+        <a href="https://www.elorchurchos.org/signup" target="_blank" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+      <div class="cp-card popular reveal" style="--delay:0.08s">
+        <div class="cp-popular">Most Popular</div>
+        <div class="cp-tier">Growth</div>
+        <div class="cp-price">$79<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+        <div class="cp-sub">Up to 500 members</div>
+        <ul class="cp-features">
+          <li><span class="chk">✓</span> Everything in Starter</li>
+          <li><span class="chk">✓</span> Up to 500 members</li>
+          <li><span class="chk">✓</span> Multi-campus</li>
+          <li><span class="chk">✓</span> Analytics & reports</li>
+          <li><span class="chk">✓</span> Volunteer management</li>
+          <li><span class="chk">✓</span> Blog & news</li>
+          <li><span class="chk">✓</span> Priority support</li>
+        </ul>
+        <a href="https://www.elorchurchos.org/signup" target="_blank" class="btn-primary" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+      <div class="cp-card reveal" style="--delay:0.16s">
+        <div class="cp-tier">Pro</div>
+        <div class="cp-price">$99<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+        <div class="cp-sub">Up to 2,000 members</div>
+        <ul class="cp-features">
+          <li><span class="chk">✓</span> Everything in Growth</li>
+          <li><span class="chk">✓</span> Up to 2,000 members</li>
+          <li><span class="chk">✓</span> Advanced analytics</li>
+          <li><span class="chk">✓</span> Custom domain</li>
+          <li><span class="chk">✓</span> API access</li>
+          <li><span class="chk">✓</span> Dedicated support</li>
+        </ul>
+        <a href="https://www.elorchurchos.org/signup" target="_blank" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+      <div class="cp-card reveal" style="--delay:0.24s">
+        <div class="cp-tier">Enterprise</div>
+        <div class="cp-price">$199<span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/mo</span></div>
+        <div class="cp-sub">Unlimited members</div>
+        <ul class="cp-features">
+          <li><span class="chk">✓</span> Everything in Pro</li>
+          <li><span class="chk">✓</span> Unlimited members</li>
+          <li><span class="chk">✓</span> Custom branding</li>
+          <li><span class="chk">✓</span> White-label option</li>
+          <li><span class="chk">✓</span> Custom integrations</li>
+          <li><span class="chk">✓</span> SLA guarantee</li>
+        </ul>
+        <a href="https://www.elorchurchos.org/signup" target="_blank" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="coming-soon-card reveal">
+      <div style="font-size:2.5rem;margin-bottom:16px;opacity:0.5;">🚀</div>
+      <h3>More Products <em style="font-style:normal;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Coming Soon</em></h3>
+      <p>We're building world-class SaaS tools for the industries we serve. New platforms are actively in development.</p>
+      <div class="coming-tags">
+        <span class="coming-tag">🏥 HealthTech Platform</span>
+        <span class="coming-tag">🏢 Real Estate SaaS</span>
+        <span class="coming-tag">🎓 EdTech Platform</span>
+        <span class="coming-tag">🌱 AgriTech Tool</span>
+      </div>
+      <a href="contact.html" class="btn-primary">Partner With Us</a>
+    </div>
+
+  </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>

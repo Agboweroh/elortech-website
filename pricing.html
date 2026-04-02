@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing — ELOR-TECH LTD</title>
+  <meta name="description" content="Transparent, flexible pricing plans for web development, mobile apps, and digital services from ELOR-TECH."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .pricing-body { padding: 90px 0; }
+    .pricing-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 80px; }
+    .compare-table { overflow-x: auto; margin-bottom: 80px; }
+    .trust-section { text-align: center; padding: 60px 0; background: var(--navy-mid); border-radius: 20px; }
+    .trust-section p { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 28px; }
+    .trust-logos { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .trust-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 22px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+    .add-ons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 80px; }
+    .addon { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; gap: 16px; align-items: flex-start; }
+    .addon-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .addon h4 { font-size: 0.95rem; margin-bottom: 6px; }
+    .addon p { font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 6px; }
+    .addon-price { font-family: var(--heading-font); font-size: 1rem; color: var(--gold); font-weight: 700; }
+    @media(max-width:1024px) { .pricing-grid-4 { grid-template-columns: repeat(2, 1fr); } .add-ons { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:768px) { .pricing-grid-4 { grid-template-columns: 1fr; } .add-ons { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Pricing</span></div>
+    <div class="section-tag fade-up">Transparent Pricing</div>
+    <h1 class="fade-up-2">The Best Solutions<br/><em style="font-style:normal;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">For Our Clients</em></h1>
+    <p class="fade-up-3">Transparent pricing. No hidden fees. Choose the plan that fits your business — or contact us for a custom quote.</p>
+  </div>
+</div>
+
+<section class="pricing-body">
+  <div class="container">
+
+    <!-- Web Dev Pricing -->
+    <div class="section-header reveal">
+      <div class="section-tag">Website Design & Development</div>
+      <h2 class="section-title">Pick Your<br/><em>Plan</em></h2>
+      <p class="section-sub">Take a look at the various packages and go for the one suitable for your business.</p>
+    </div>
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="plan-tier">Starter</div>
+        <div class="plan-price"><span class="currency">$</span>250<span class="period">/mo</span></div>
+        <div class="plan-sub">Basic Plan · Perfect for small businesses</div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Custom website design</li>
+          <li><span class="chk">✓</span> Up to 5 pages</li>
+          <li><span class="chk">✓</span> Basic SEO setup</li>
+          <li><span class="chk">✓</span> Monthly maintenance and updates</li>
+          <li><span class="chk">✓</span> Mobile responsive design</li>
+          <li><span class="chk">✓</span> Email support</li>
+        </ul>
+        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-tier">Growth</div>
+        <div class="plan-price"><span class="currency">$</span>500<span class="period">/mo</span></div>
+        <div class="plan-sub">Pro Plan · For growing businesses</div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Everything in Basic Plan</li>
+          <li><span class="chk">✓</span> Up to 15 pages</li>
+          <li><span class="chk">✓</span> Advanced SEO optimization</li>
+          <li><span class="chk">✓</span> E-commerce functionality</li>
+          <li><span class="chk">✓</span> Monthly analytics reports</li>
+          <li><span class="chk">✓</span> Priority support</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="plan-tier">Enterprise</div>
+        <div class="plan-price"><span class="currency">$</span>1,000<span class="period">/mo</span></div>
+        <div class="plan-sub">Enterprise Plan · Full-scale digital presence</div>
+        <ul class="plan-features">
+          <li><span class="chk">✓</span> Everything in Pro Plan</li>
+          <li><span class="chk">✓</span> Unlimited pages</li>
+          <li><span class="chk">✓</span> Custom backend development</li>
+          <li><span class="chk">✓</span> Dedicated project manager</li>
+          <li><span class="chk">✓</span> Weekly performance reviews</li>
+          <li><span class="chk">✓</span> 24/7 dedicated support</li>
+        </ul>
+        <a href="contact.html" class="btn-outline" style="width:100%;text-align:center;">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Services Pricing note -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;" class="reveal">
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:6px;">Need a custom quote?</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin:0;">Mobile apps, enterprise software, marketing campaigns — we tailor every package to your needs.</p>
+      </div>
+      <a href="contact.html" class="btn-primary" style="flex-shrink:0;">Request a Quote</a>
+    </div>
+
+    <!-- Trusted Companies -->
+    <div style="margin-top:80px;" class="reveal">
+      <div class="trust-section">
+        <p>Trusted by companies across multiple industries</p>
+        <div class="trust-logos">
+          <div class="trust-item">Eteva</div>
+          <div class="trust-item">Querida Living</div>
+          <div class="trust-item">GradTutors</div>
+          <div class="trust-item">TOTFRISHION USA</div>
+          <div class="trust-item">Berechiah</div>
+          <div class="trust-item">FMS</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-band-inner reveal">
+    <h2>Still Not Sure Which Plan?</h2>
+    <p>Let's talk. We'll help you find the right solution for your business and budget — no pressure, no commitment.</p>
+    <div class="btns">
+      <a href="contact.html" class="btn-primary">Talk to Us</a>
+      <a href="hosting.html" class="btn-outline">See Hosting Plans</a>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
